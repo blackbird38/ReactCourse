@@ -1,3 +1,9 @@
+### `npm install`
+
+![alt text](https://1.bp.blogspot.com/-6LnMtpgArro/XwN5h6ViVNI/AAAAAAAAAXY/3vCvzimZhM4QGbEkJ5xEsUJzSHmAqM87ACLcBGAsYHQ/s1600/Capture02.JPG)
+
+![alt text](https://1.bp.blogspot.com/-v1T-f4VDT3c/XwN5h5-SSZI/AAAAAAAAAXU/v9yX9f2lcnwe5n2QWLONKrsvtSnLMOgrACLcBGAsYHQ/s1600/Capture01.JPG)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
