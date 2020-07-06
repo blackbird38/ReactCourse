@@ -1,14 +1,39 @@
 import './App.css';
-import React from 'react';
+import React, { useState } from 'react';
 import SearchBar from './SearchBar';
 import ProductTable from './ProductTable';
 
 function FilterableProductTable() {
+  const products = [
+    { category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football' },
+    { category: 'Sporting Goods', price: '$9.99', stocked: true, name: 'Baseball' },
+    {
+      category: 'Sporting Goods',
+      price: '$29.99',
+      stocked: false,
+      name: 'Basketball',
+    },
+    { category: 'Electronics', price: '$99.99', stocked: true, name: 'iPod Touch' },
+    { category: 'Electronics', price: '$399.99', stocked: false, name: 'iPhone 5' },
+    { category: 'Electronics', price: '$199.99', stocked: true, name: 'Nexus 7' },
+  ];
+
+  const [filterText, setFilterText] = useState('');
+  const [isStockOnly, setIsStockOnly] = useState(false);
+
   return (
     <div className="filterable-product-table">
-      <span>FilterableProductTable</span>
-      <SearchBar />
-      <ProductTable />
+      <span>
+        FilterableProductTable {filterText} {isStockOnly.toString()}
+      </span>
+
+      <SearchBar
+        filterText={filterText}
+        isStockOnly={isStockOnly}
+        handleChange={setFilterText}
+        handleChangeCheckbox={setIsStockOnly}
+      />
+      <ProductTable filterText={filterText} isStockOnly={isStockOnly} />
     </div>
   );
 }

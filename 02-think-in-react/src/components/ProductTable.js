@@ -6,6 +6,7 @@ function ProductTable() {
   return (
     <div className="ui container product-table">
       ProductTable
+      <p>Name | Price</p>
       <ProductCategoryRow />
       <ProductRow />
     </div>
