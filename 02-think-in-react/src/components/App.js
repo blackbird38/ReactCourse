@@ -1,7 +1,13 @@
+import './App.css';
 import React from 'react';
+import FilterableProductTable from './FilterableProductTable';
 
 function App() {
-  return <div className="ui container"></div>;
+  return (
+    <div className="App">
+      <FilterableProductTable />
+    </div>
+  );
 }
 
 export default App;
