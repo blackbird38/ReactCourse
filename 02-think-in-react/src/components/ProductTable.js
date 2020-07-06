@@ -26,10 +26,6 @@ function ProductTable({ categories, products, filterText, isStockOnly }) {
     return categProducts;
   };
 
-  const getProducts = (category) => {
-    return products.map.filter((product) => product.stocked === isStockOnly);
-  };
-
   const rendered = categories.map((category) => {
     return (
       <div>
