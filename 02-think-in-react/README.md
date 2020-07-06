@@ -1,10 +1,10 @@
 Solution for: (https://reactjs.org/docs/thinking-in-react.html)
 
-!(https://1.bp.blogspot.com/-oeVh9HSClqo/XwN1QW_KUTI/AAAAAAAAAXA/j11J8_IhkPkoKNfqMofLOJW4hgQaegbQQCLcBGAsYHQ/s1600/Capture01.JPG)
+![alt text](https://1.bp.blogspot.com/-oeVh9HSClqo/XwN1QW_KUTI/AAAAAAAAAXA/j11J8_IhkPkoKNfqMofLOJW4hgQaegbQQCLcBGAsYHQ/s1600/Capture01.JPG)
 
-!(https://1.bp.blogspot.com/-4lNzXfv7pMk/XwN1ZRl0URI/AAAAAAAAAXI/sNp-alclHskpuA_ZCyG_fkDDIwuICg4vACLcBGAsYHQ/s1600/Capture02.JPG)
+![alt text](https://1.bp.blogspot.com/-4lNzXfv7pMk/XwN1ZRl0URI/AAAAAAAAAXI/sNp-alclHskpuA_ZCyG_fkDDIwuICg4vACLcBGAsYHQ/s1600/Capture02.JPG)
 
-!(https://1.bp.blogspot.com/-Yg6mqawnH-o/XwN1QdJPN-I/AAAAAAAAAXE/5HpuBKHmscIcFwUvcHeTuRzvUHSZ0UDqQCLcBGAsYHQ/s1600/Capture03.JPG)
+![alt text](https://1.bp.blogspot.com/-Yg6mqawnH-o/XwN1QdJPN-I/AAAAAAAAAXE/5HpuBKHmscIcFwUvcHeTuRzvUHSZ0UDqQCLcBGAsYHQ/s1600/Capture03.JPG)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
