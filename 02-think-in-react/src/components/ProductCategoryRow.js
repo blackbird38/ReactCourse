@@ -1,7 +1,7 @@
 import React from 'react';
 
-function ProductCategoryRow() {
-  return <div className="ui container product-category-row">ProductCategoryRow</div>;
+function ProductCategoryRow({ category }) {
+  return <div className="ui container product-category-row"> {category}</div>;
 }
 
 export default ProductCategoryRow;

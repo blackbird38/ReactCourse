@@ -21,6 +21,16 @@ function FilterableProductTable() {
   const [filterText, setFilterText] = useState('');
   const [isStockOnly, setIsStockOnly] = useState(false);
 
+  const getUniqueCategories = (products) => {
+    const categories = products.map((product) => {
+      return product.category;
+    });
+    const filteredCategories = new Set(categories);
+    return [...filteredCategories];
+  };
+
+  const uniqueCategories = getUniqueCategories(products);
+
   return (
     <div className="filterable-product-table">
       <span>
@@ -33,7 +43,12 @@ function FilterableProductTable() {
         handleChange={setFilterText}
         handleChangeCheckbox={setIsStockOnly}
       />
-      <ProductTable filterText={filterText} isStockOnly={isStockOnly} />
+      <ProductTable
+        filterText={filterText}
+        isStockOnly={isStockOnly}
+        categories={uniqueCategories}
+        products={products}
+      />
     </div>
   );
 }
