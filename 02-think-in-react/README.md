@@ -1,5 +1,3 @@
-### `npm install`
-
 Solution for: (https://reactjs.org/docs/thinking-in-react.html)
 
 ![alt text](https://1.bp.blogspot.com/-oeVh9HSClqo/XwN1QW_KUTI/AAAAAAAAAXA/j11J8_IhkPkoKNfqMofLOJW4hgQaegbQQCLcBGAsYHQ/s1600/Capture01.JPG)
