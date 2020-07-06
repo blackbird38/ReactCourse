@@ -28,7 +28,7 @@ function ProductTable({ categories, products, filterText, isStockOnly }) {
 
   const rendered = categories.map((category) => {
     return (
-      <div>
+      <div key={category + 'key'}>
         <ProductCategoryRow category={category} key={category}></ProductCategoryRow>
         <ProductRow products={getProductsByCategory(category)} />
       </div>
