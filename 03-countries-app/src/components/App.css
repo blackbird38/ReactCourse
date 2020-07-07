@@ -7,8 +7,7 @@
 }
 
 .country {
-  height: 250px;
-  width: 700px !important;
+  margin: 0.75em !important ;
 }
 
 .color {
@@ -18,8 +17,10 @@
 .selected-countries {
   background-color: paleturquoise;
   padding-bottom: 1em;
+  width: 100%;
 }
 .selected-country {
+  margin: 0.25em !important;
 }
 .validate-button {
   margin: 1em;
@@ -42,4 +43,11 @@
 
 .message-box {
   margin-top: 3em !important;
+}
+
+.loading {
+  height: 100vh;
+}
+
+.flag-image {
 }

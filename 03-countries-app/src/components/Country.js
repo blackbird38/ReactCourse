@@ -8,9 +8,9 @@ const Country = ({ country, selectCountry }) => {
   };
 
   return (
-    <a className="ui  massive label" onClick={selectCountryClick}>
-      <img className="ui right spaced avatar image" src={country.flag} />
-      {country.name}
+    <a className="ui image label country" onClick={selectCountryClick}>
+      <img className="flag-image" src={country.flag} />
+      {country.name} <span className="color">({country.capital})</span>
     </a>
   );
 };

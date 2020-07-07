@@ -6,6 +6,7 @@ import ValidateButton from './ValidateButton';
 import EmailInput from './EmailInput';
 import SendButton from './SendButton';
 import MessageBox from './MessageBox';
+import Loading from './Loading';
 
 const App = () => {
   const [countries, setCountries] = useState([]);
@@ -113,7 +114,7 @@ const App = () => {
         <div className="row">
           {countries.length != 0 ? (
             <>
-              <div className="twelve wide column">
+              <div className="eleven wide column">
                 <CountryList
                   className="country-list"
                   countries={unselectedCountries}
@@ -121,7 +122,7 @@ const App = () => {
                   total={countries.length}
                 />
               </div>
-              <div className="four wide column divided grid right-panel">
+              <div className="five wide column divided grid right-panel">
                 <div className="row">
                   <SelectedCountries
                     className="selected-countries column"
@@ -145,12 +146,7 @@ const App = () => {
               </div>
             </>
           ) : (
-            <div className="ui segment">
-              <div className="ui active inverted dimmer">
-                <div className="ui text loader">Loading</div>
-              </div>
-              <p></p>
-            </div>
+            <Loading />
           )}
         </div>
       ) : (
