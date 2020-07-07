@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const ValidateButton = ({ showEmailInput }) => {
   const showEmailInputClick = () => {
@@ -11,6 +12,10 @@ const ValidateButton = ({ showEmailInput }) => {
       </button>
     </div>
   );
+};
+
+ValidateButton.propTypes = {
+  showEmailInput: PropTypes.func.isRequired,
 };
 
 export default ValidateButton;

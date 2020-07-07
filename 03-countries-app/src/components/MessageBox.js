@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const MessageBox = ({ closeMessageAndGoHome, emailAddress, selectedCountries }) => {
+const MessageBox = ({ emailAddress, selectedCountries, closeMessageAndGoHome }) => {
   const renderedCountries = selectedCountries.map((country) => {
     return (
       <a className="ui image label selected-country" key={country.name}>
@@ -19,6 +20,12 @@ const MessageBox = ({ closeMessageAndGoHome, emailAddress, selectedCountries }) 
       <div>Your selection: {renderedCountries}</div>
     </div>
   );
+};
+
+MessageBox.propTypes = {
+  emailAddress: PropTypes.string.isRequired,
+  selectedCountries: PropTypes.array.isRequired,
+  closeMessageAndGoHome: PropTypes.func.isRequired,
 };
 
 export default MessageBox;

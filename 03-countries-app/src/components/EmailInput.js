@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const EmailInput = ({ onEmailTyped }) => {
   const onEmailTypedChange = (e) => {
@@ -14,6 +15,10 @@ const EmailInput = ({ onEmailTyped }) => {
       />
     </div>
   );
+};
+
+EmailInput.propTypes = {
+  onEmailTypedChange: PropTypes.func.isRequired,
 };
 
 export default EmailInput;

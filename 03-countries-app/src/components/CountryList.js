@@ -1,5 +1,6 @@
 import React from 'react';
 import Country from './Country';
+import PropTypes from 'prop-types';
 
 const CountryList = ({ countries, selectCountry, total }) => {
   //console.log('CountryList: countries', countries);
@@ -20,6 +21,11 @@ const CountryList = ({ countries, selectCountry, total }) => {
       <div className="ui list">{renderedCountries}</div>
     </div>
   );
+};
+
+CountryList.propTypes = {
+  countries: PropTypes.array.isRequired,
+  selectCountry: PropTypes.func.isRequired,
 };
 
 export default CountryList;

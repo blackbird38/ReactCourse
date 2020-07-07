@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Country = ({ country, selectCountry }) => {
   //console.log('Country', country);
@@ -13,6 +14,11 @@ const Country = ({ country, selectCountry }) => {
       {country.name} <span className="color">({country.capital})</span>
     </a>
   );
+};
+
+Country.propTypes = {
+  country: PropTypes.object.isRequired,
+  selectCountry: PropTypes.func.isRequired,
 };
 
 export default Country;
