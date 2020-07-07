@@ -5,7 +5,7 @@ const CountryList = ({ countries, selectCountry, total }) => {
   //console.log('CountryList: countries', countries);
 
   const renderedCountries = countries.map((country) => (
-    <Country country={country} key={country.name} selectCountry={selectCountry} />
+    <Country country={country} key={country.code} selectCountry={selectCountry} />
   ));
   //console.log('CountryList: renderedCountries', renderedCountries);
 

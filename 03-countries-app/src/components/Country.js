@@ -8,21 +8,10 @@ const Country = ({ country, selectCountry }) => {
   };
 
   return (
-    <div className="ui raised card country" onClick={selectCountryClick}>
-      <div className="content">
-        <div className="header">{country.name}</div>
-        <div className="meta">
-          <span className="category color">{country.capital}</span>
-        </div>
-        <div className="meta">
-          <span className="category">{country.continent}</span>
-        </div>
-        <img className="ui avatar image" src={country.flag} />
-        <div className="description">
-          <p>{country.description}</p>
-        </div>
-      </div>
-    </div>
+    <a className="ui  massive label" onClick={selectCountryClick}>
+      <img className="ui right spaced avatar image" src={country.flag} />
+      {country.name}
+    </a>
   );
 };
 
