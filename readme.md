@@ -20,6 +20,18 @@
 
 ![alt text](https://1.bp.blogspot.com/--HLPVQaEqW0/XwSLnLscZxI/AAAAAAAAAYI/0hHoPctNwk8J9qEX4cCqygG-2T_N-iV3QCLcBGAsYHQ/s1600/Capture02.JPG)
 
+https://jsonplaceholder.typicode.com/
+
+https://github.com/boo1ean/casual
+
+https://mockaroo.com/
+
+https://github.com/public-apis/public-apis
+
 https://www.codeinwp.com/blog/react-ui-component-libraries-frameworks/
 
 https://restcountries.eu/rest/v2/all
+
+https://www.npmjs.com/package/@welldone-software/why-did-you-render
+
+https://fr.reactjs.org/docs/react-api.html#reactmemo
