@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import CountryList from './CountryList';
 import SelectedCountries from './SelectedCountries';
 import ValidateButton from './ValidateButton';
+import EmailInput from './EmailInput';
 
 const flagsURL = '/images/flags/';
 
@@ -66,6 +67,8 @@ const App = () => {
     countries[4],
   ]);
 
+  const [showEmailInputForm, setShowEmailInputForm] = useState(false);
+
   const removeCountry = (countryToRemove) => {
     //console.log('App: removeCountry', countryToRemove);
     setSelectedCountries(
@@ -74,6 +77,9 @@ const App = () => {
       })
     );
     setUnselectedCountries([...unselectedCountries, countryToRemove]);
+    if (selectedCountries.length == 1) {
+      setShowEmailInputForm(false);
+    }
   };
 
   const selectCountry = (countryToAdd) => {
@@ -85,6 +91,13 @@ const App = () => {
       })
     );
     setSelectedCountries([...selectedCountries, countryToAdd]);
+  };
+
+  const showEmailInput = () => {
+    if (selectedCountries.length) {
+      setShowEmailInputForm(true);
+      console.log(showEmailInputForm);
+    }
   };
 
   return (
@@ -107,8 +120,13 @@ const App = () => {
             />
           </div>
           <div className="row">
-            <ValidateButton />
+            {selectedCountries.length ? (
+              <ValidateButton showEmailInput={showEmailInput} />
+            ) : (
+              <p className="color">Select at least a country to send.</p>
+            )}
           </div>
+          <div className="row">{showEmailInputForm && <EmailInput />}</div>
         </div>
       </div>
     </div>

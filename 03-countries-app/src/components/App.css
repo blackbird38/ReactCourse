@@ -22,12 +22,7 @@
 .selected-country {
 }
 .validate-button {
-  /*position: fixed;
-  width: 450px;
-  height: 50px;
-  bottom: 10px;
-  right: 0;
-  background-color: paleturquoise;*/
+  margin: 1em;
 }
 
 .right-panel {
