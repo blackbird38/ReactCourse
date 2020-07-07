@@ -7,6 +7,7 @@ const flagsURL = '/images/flags/';
 
 const countries = [
   {
+    key: '1',
     name: 'France',
     capital: 'Paris',
     continent: 'Europe',
@@ -15,6 +16,7 @@ const countries = [
     flag: `${flagsURL}france.png`,
   },
   {
+    key: '2',
     name: 'Romania',
     capital: 'Bucharest',
     continent: 'Europe',
@@ -23,6 +25,7 @@ const countries = [
     flag: `${flagsURL}romania.png`,
   },
   {
+    key: '3',
     name: 'Spain',
     capital: 'Madrid',
     continent: 'Europe',
@@ -31,6 +34,7 @@ const countries = [
     flag: `${flagsURL}spain.png`,
   },
   {
+    key: '4',
     name: 'Turkey',
     capital: 'Ankara',
     continent: 'Western Asia',
@@ -38,14 +42,64 @@ const countries = [
       'Turkey, officially the Republic of Turkey, is a transcontinental Eurasian country located mainly on the Anatolian peninsula in Western Asia, with a smaller portion on the Balkan peninsula in Southeastern Europe.',
     flag: `${flagsURL}turkey.png`,
   },
+  {
+    key: '5',
+    name: 'Italy',
+    capital: 'Rome',
+    continent: 'Europe',
+    description:
+      'Italy, a European country with a long Mediterranean coastline, has left a powerful mark on Western culture and cuisine. Its capital, Rome, is home to the Vatican as well as landmark art and ancient ruins. Other major cities include Florence, with Renaissance masterpieces such as Michelangelo’s "David" and Brunelleschi\'s Duomo; Venice, the city of canals; and Milan, Italy’s fashion capital.',
+    flag: `${flagsURL}italy.png`,
+  },
 ];
 
 const App = () => {
+  const [selectedCountries, setSelectedCountries] = useState([
+    countries[0],
+    countries[1],
+  ]);
+
+  const [unselectedCountries, setUnselectedCountries] = useState([
+    countries[2],
+    countries[3],
+    countries[4],
+  ]);
+
+  const removeCountry = (countryToRemove) => {
+    //console.log('App: removeCountry', countryToRemove);
+    setSelectedCountries(
+      selectedCountries.filter((country) => {
+        return country.name !== countryToRemove.name;
+      })
+    );
+    setUnselectedCountries([...unselectedCountries, countryToRemove]);
+  };
+
+  const selectCountry = (countryToAdd) => {
+    console.log('App: selectCountry', countryToAdd);
+
+    setUnselectedCountries(
+      unselectedCountries.filter((country) => {
+        return country.name !== countryToAdd.name;
+      })
+    );
+    setSelectedCountries([...selectedCountries, countryToAdd]);
+  };
+
   return (
     <div className="App ui two column divided grid">
       <div className="row">
-        <CountryList className="country-list column" countries={countries} />
-        <SelectedCountries className="selected-countries column" />
+        <CountryList
+          className="country-list column"
+          countries={unselectedCountries}
+          selectCountry={selectCountry}
+          total={countries.length}
+        />
+        <SelectedCountries
+          className="selected-countries column"
+          selectedCountries={selectedCountries}
+          removeCountry={removeCountry}
+        />
       </div>
     </div>
   );

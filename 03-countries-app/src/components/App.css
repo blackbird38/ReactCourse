@@ -22,4 +22,7 @@
   border: 0;
   background-color: paleturquoise;
   width: 450px;
+  padding-bottom: 1em;
+}
+.selected-country {
 }

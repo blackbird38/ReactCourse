@@ -1,9 +1,14 @@
 import React from 'react';
 
-const Country = ({ country }) => {
-  console.log('Country', country);
+const Country = ({ country, selectCountry }) => {
+  //console.log('Country', country);
+
+  const selectCountryClick = () => {
+    selectCountry(country);
+  };
+
   return (
-    <div className="ui raised card country">
+    <div className="ui raised card country" onClick={selectCountryClick}>
       <div className="content">
         <div className="header">{country.name}</div>
         <div className="meta">
