@@ -1,0 +1,25 @@
+.App {
+  text-align: center;
+  margin-top: 2em;
+}
+
+.country-list {
+}
+
+.country {
+  height: 250px;
+  width: 700px !important;
+}
+
+.color {
+  color: palevioletred;
+}
+
+.selected-countries {
+  position: fixed;
+  top: 0;
+  right: 0;
+  border: 0;
+  background-color: paleturquoise;
+  width: 450px;
+}
