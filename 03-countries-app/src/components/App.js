@@ -178,6 +178,7 @@ const App = () => {
         <MessageBox
           closeMessageAndGoHome={closeMessageAndGoHome}
           emailAddress={emailAddress}
+          selectedCountries={selectedCountries}
         />
       )}
     </div>
