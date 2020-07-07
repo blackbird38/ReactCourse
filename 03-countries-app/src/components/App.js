@@ -2,6 +2,7 @@ import './App.css';
 import React, { useState } from 'react';
 import CountryList from './CountryList';
 import SelectedCountries from './SelectedCountries';
+import ValidateButton from './ValidateButton';
 
 const flagsURL = '/images/flags/';
 
@@ -76,7 +77,7 @@ const App = () => {
   };
 
   const selectCountry = (countryToAdd) => {
-    console.log('App: selectCountry', countryToAdd);
+    //console.log('App: selectCountry', countryToAdd);
 
     setUnselectedCountries(
       unselectedCountries.filter((country) => {
@@ -87,19 +88,28 @@ const App = () => {
   };
 
   return (
-    <div className="App ui two column divided grid">
+    <div className="App ui two column grid">
       <div className="row">
-        <CountryList
-          className="country-list column"
-          countries={unselectedCountries}
-          selectCountry={selectCountry}
-          total={countries.length}
-        />
-        <SelectedCountries
-          className="selected-countries column"
-          selectedCountries={selectedCountries}
-          removeCountry={removeCountry}
-        />
+        <div className="twelve wide column">
+          <CountryList
+            className="country-list"
+            countries={unselectedCountries}
+            selectCountry={selectCountry}
+            total={countries.length}
+          />
+        </div>
+        <div className="four wide column divided grid right-panel">
+          <div className="row">
+            <SelectedCountries
+              className="selected-countries column"
+              selectedCountries={selectedCountries}
+              removeCountry={removeCountry}
+            />
+          </div>
+          <div className="row">
+            <ValidateButton />
+          </div>
+        </div>
       </div>
     </div>
   );
