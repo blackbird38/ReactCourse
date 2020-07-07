@@ -3,7 +3,7 @@ import React from 'react';
 const MessageBox = ({ closeMessageAndGoHome, emailAddress, selectedCountries }) => {
   const renderedCountries = selectedCountries.map((country) => {
     return (
-      <a className="ui image label">
+      <a className="ui image label" key={country.name}>
         <img src={country.flag} />
         {country.name}
       </a>
