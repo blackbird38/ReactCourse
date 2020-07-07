@@ -15,7 +15,7 @@ const MessageBox = ({ closeMessageAndGoHome, emailAddress, selectedCountries }) 
   return (
     <div className="ui info message container segment message-box">
       <i className="close icon" onClick={closeMessage}></i>
-      <div clasName="header">Your email was sent to: {emailAddress}</div>
+      <div className="header">Your email was sent to: {emailAddress}</div>
       <div>Your selection: {renderedCountries}</div>
     </div>
   );
