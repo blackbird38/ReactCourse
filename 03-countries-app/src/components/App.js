@@ -4,6 +4,8 @@ import CountryList from './CountryList';
 import SelectedCountries from './SelectedCountries';
 import ValidateButton from './ValidateButton';
 import EmailInput from './EmailInput';
+import SendButton from './SendButton';
+import MessageBox from './MessageBox';
 
 const flagsURL = '/images/flags/';
 
@@ -69,6 +71,12 @@ const App = () => {
 
   const [showEmailInputForm, setShowEmailInputForm] = useState(false);
 
+  const [showSendButton, setShowSendButton] = useState(false);
+
+  const [emailAddress, setEmailAddress] = useState('');
+
+  const [sendClicked, setSendClicked] = useState(false);
+
   const removeCountry = (countryToRemove) => {
     //console.log('App: removeCountry', countryToRemove);
     setSelectedCountries(
@@ -100,35 +108,78 @@ const App = () => {
     }
   };
 
+  const onEmailTyped = (email) => {
+    console.log('email', email);
+    const isEmailValid = validateEmail(email);
+    setShowSendButton(isEmailValid);
+    setEmailAddress(email);
+    //  console.log(showSendButton);
+    console.log('state EmailAdress', emailAddress);
+  };
+
+  const validateEmail = (email) => {
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+      return true;
+    }
+    return false;
+  };
+
+  const sendEmail = () => {
+    console.log('App', emailAddress);
+    setSendClicked(true);
+    console.log(sendClicked);
+  };
+
+  const closeMessageAndGoHome = () => {
+    setSelectedCountries([]);
+    setUnselectedCountries(countries);
+    setShowEmailInputForm(false);
+    setEmailAddress('');
+    setShowSendButton(false);
+    setSendClicked(false);
+  };
+
   return (
     <div className="App ui two column grid">
-      <div className="row">
-        <div className="twelve wide column">
-          <CountryList
-            className="country-list"
-            countries={unselectedCountries}
-            selectCountry={selectCountry}
-            total={countries.length}
-          />
-        </div>
-        <div className="four wide column divided grid right-panel">
-          <div className="row">
-            <SelectedCountries
-              className="selected-countries column"
-              selectedCountries={selectedCountries}
-              removeCountry={removeCountry}
+      {!sendClicked ? (
+        <div className="row">
+          <div className="twelve wide column">
+            <CountryList
+              className="country-list"
+              countries={unselectedCountries}
+              selectCountry={selectCountry}
+              total={countries.length}
             />
           </div>
-          <div className="row">
-            {selectedCountries.length ? (
-              <ValidateButton showEmailInput={showEmailInput} />
-            ) : (
-              <p className="color">Select at least a country to send.</p>
-            )}
+          <div className="four wide column divided grid right-panel">
+            <div className="row">
+              <SelectedCountries
+                className="selected-countries column"
+                selectedCountries={selectedCountries}
+                removeCountry={removeCountry}
+              />
+            </div>
+            <div className="row">
+              {selectedCountries.length ? (
+                <ValidateButton showEmailInput={showEmailInput} />
+              ) : (
+                <p className="color">Select at least a country to send.</p>
+              )}
+            </div>
+            <div className="row">
+              {showEmailInputForm && <EmailInput onEmailTyped={onEmailTyped} />}
+            </div>
+            <div className="row">
+              {showSendButton && <SendButton sendEmail={sendEmail} />}
+            </div>
           </div>
-          <div className="row">{showEmailInputForm && <EmailInput />}</div>
         </div>
-      </div>
+      ) : (
+        <MessageBox
+          closeMessageAndGoHome={closeMessageAndGoHome}
+          emailAddress={emailAddress}
+        />
+      )}
     </div>
   );
 };

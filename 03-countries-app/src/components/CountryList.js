@@ -14,7 +14,8 @@ const CountryList = ({ countries, selectCountry, total }) => {
       <h2 className="ui header">Country List</h2>
       <p>
         Here is a selection of <span className="color">{total}</span> countries.
-        Select some as your next destination and let your best friend know about it!
+        Select some as your next holiday destination and let your best friend know
+        about it!
       </p>
       <div className="ui four column relaxed grid">{renderedCountries}</div>
     </div>
