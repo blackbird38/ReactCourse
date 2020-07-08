@@ -11,9 +11,7 @@ function SearchPage() {
   const [searchResult, setSearchResult] = useState([]);
 
   useEffect(() => {
-    //const result =
     search('Enya');
-    //setSearchResult(result);
     console.log('useEffect', searchResult);
   }, []);
 
