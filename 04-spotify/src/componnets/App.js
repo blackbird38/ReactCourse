@@ -12,7 +12,7 @@ function App() {
     const searchResult = Spotify.search(term);
     console.log(searchResult);
   };
-  // console.log(Spotify.search('Enya'));
+
   return (
     <div className="App">
       <SearchBar search={search} />
