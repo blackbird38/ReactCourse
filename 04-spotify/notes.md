@@ -1,4 +1,4 @@
-Obtain a Spotify Access Token
+###Obtain a Spotify Access Token
 
 Spotify Applications Registration Flow
 

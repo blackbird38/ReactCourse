@@ -5,6 +5,10 @@ const clientId = 'add-your-client-id';
 module.exports = clientId;
 ```
 
+To get your clientID on Spotify:
+
+https://developer.spotify.com/documentation/general/guides/app-settings/
+
 ### `npm install`
 
 ### `npm start`
