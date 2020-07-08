@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const AlbumCard = ({ album }) => {
   return (
@@ -10,6 +11,7 @@ const AlbumCard = ({ album }) => {
         <div className="header">{album.name}</div>
         <div className="meta">
           <a>...</a>
+          <Link to={`/album/${album.id}`}>{album.id}</Link>
         </div>
         <div className="description">artists</div>
       </div>
