@@ -1,3 +1,10 @@
+Add a file: `./src/util.clientID.js` with the code:
+
+```
+const clientId = 'add-your-client-id';
+module.exports = clientId;
+```
+
 ### `npm install`
 
 ### `npm start`
