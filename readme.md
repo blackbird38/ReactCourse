@@ -45,3 +45,6 @@ https://fr.reactjs.org/docs/react-api.html#reactmemo
 https://kentcdodds.com/blog/
 
 https://github.com/react-spring/zustand
+
+04-spotify
+https://developer.spotify.com/documentation/web-api/
