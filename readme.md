@@ -41,3 +41,7 @@ https://restcountries.eu/rest/v2/all
 https://www.npmjs.com/package/@welldone-software/why-did-you-render
 
 https://fr.reactjs.org/docs/react-api.html#reactmemo
+
+https://kentcdodds.com/blog/
+
+https://github.com/react-spring/zustand
