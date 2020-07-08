@@ -48,3 +48,5 @@ https://github.com/react-spring/zustand
 
 04-spotify
 https://developer.spotify.com/documentation/web-api/
+
+https://overreacted.io/
