@@ -1,3 +1,18 @@
 .App {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.image-list {
+  margin: 2em !important;
+  margin-left: 8% !important;
+}
+
+.image-list img {
+}
+
+.search-bar {
+  margin-top: 4em;
 }

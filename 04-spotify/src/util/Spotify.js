@@ -26,35 +26,6 @@ const Spotify = {
       window.location = accessUrl;
     }
   },
-
-  search(term) {
-    const accessToken = Spotify.getAccessToken();
-    return fetch(`https://api.spotify.com/v1/search?type=album&q=${term}`, {
-      headers: {
-        Authorization: `Bearer ${accessToken}`,
-      },
-    })
-      .then((response) => {
-        return response.json();
-      })
-      .then((jsonResponse) => {
-        if (!jsonResponse.albums) {
-          // no album in the response
-          return [];
-        }
-        const filteredAlbums = jsonResponse.albums.items.map((album) => ({
-          id: album.id,
-          name: album.name,
-          release_date: album.release_date,
-          total_tracks: album.total_tracks,
-          artists: album.artists,
-          image: album.images[1].url,
-          uri: album.uri,
-        }));
-        console.log(filteredAlbums);
-        return filteredAlbums;
-      });
-  },
 };
 
 export default Spotify;

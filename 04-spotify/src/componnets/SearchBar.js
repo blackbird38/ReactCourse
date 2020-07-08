@@ -2,7 +2,7 @@ import React from 'react';
 
 const SearchBar = ({ search }) => {
   return (
-    <div className="ui action input">
+    <div className="ui action input search-bar">
       <input
         type="text"
         placeholder="Search..."
