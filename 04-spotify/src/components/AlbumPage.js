@@ -102,19 +102,27 @@ const AlbumPage = ({ match }) => {
     <div className="album-page">
       <div className="ui grid">
         <div className="row">
-          <img src={albumInfo.image} />
-          <div className="album-page-header-info">
-            <h1>{albumInfo.name}</h1>
-            <div>by {renderedArtists} </div>
-            <div>
-              <span>{albumInfo.release_date}</span> ●
-              <span> {totalAlbumPlayTime(albumTracks)} </span> ●
-              <span> {albumTracks.length} tracks </span>
+          <div className="sixteen wide column">
+            <div className="ui grid">
+              <img src={albumInfo.image} />
+              <div className="album-page-header-info pt-4">
+                <span className="text-2xl">{albumInfo.name}</span>
+                <div>
+                  by <span className="text-pink-500">{renderedArtists}</span>
+                </div>
+                <div>
+                  <span>{albumInfo.release_date}</span> ●
+                  <span> {totalAlbumPlayTime(albumTracks)} </span> ●
+                  <span> {albumTracks.length} tracks </span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
         <div className="row">
-          <TrackList tracks={albumTracks} />
+          <div className="sixteen wide column">
+            <TrackList tracks={albumTracks} />
+          </div>
         </div>
       </div>
     </div>

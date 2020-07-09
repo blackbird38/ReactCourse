@@ -1,18 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import { withRouter } from 'react-router';
 import Spotify from '../util/Spotify';
+import TrackList from './TrackList';
 
 const ArtistPage = ({ match }) => {
+  const accessToken = Spotify.getAccessToken();
+
   const { id } = match.params;
 
   const [artistInfo, setArtistInfo] = useState({});
 
+  const [topTracks, setTopTracks] = useState([]);
+
   useEffect(() => {
     getArtistById(id);
+    getArtistTopTracksById(id);
   }, []);
 
   const getArtistById = (id) => {
-    const accessToken = Spotify.getAccessToken();
     fetch(`https://api.spotify.com/v1/artists/${id}`, {
       headers: {
         Authorization: `Bearer ${accessToken}`,
@@ -22,7 +27,7 @@ const ArtistPage = ({ match }) => {
         return response.json();
       })
       .then((jsonResponse) => {
-        console.log(jsonResponse);
+        // console.log('getArtistById', jsonResponse);
 
         if (!jsonResponse) {
           // no artist in the response
@@ -47,61 +52,68 @@ const ArtistPage = ({ match }) => {
       .catch((error) => console.log(error));
   };
 
+  const getArtistTopTracksById = (id) => {
+    fetch(`https://api.spotify.com/v1/artists/${id}/top-tracks?country=FR`, {
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+      },
+    })
+      .then((response) => {
+        return response.json();
+      })
+      .then((jsonResponse) => {
+        console.log('jsonResponse toptracks', jsonResponse);
+
+        if (!jsonResponse.tracks) {
+          // no track in the response
+          return null;
+        }
+
+        const filteredArtistTopTracksData = jsonResponse.tracks.map((track) => {
+          return {
+            id,
+            album: track.album,
+            name: track.name,
+            popularity: track.popularity,
+            album: track.album,
+            duration_ms: track.duration_ms,
+            type: track.type,
+            uri: track.uri,
+          };
+        });
+        setTopTracks(filteredArtistTopTracksData);
+        return filteredArtistTopTracksData;
+      })
+      .catch((error) => console.log(error));
+  };
+
   function renderedGenres(genres) {
     genres.map((genre) => <span>{genre}</span>);
   }
 
   return (
-    <div className="album-page">
+    <div className="artist-page">
       <div className="ui grid">
         <div className="row">
-          <img src={artistInfo.image} />
-          <div className="artist-page-header-info">
-            <h1>{artistInfo.name}</h1>
-            <div> </div>
-            <div>
-              <span>{artistInfo.type}</span> ●<span> {artistInfo.popularity} </span>●
-              <span> {artistInfo.followers} followers </span>
+          <div className="ui grid">
+            <img src={artistInfo.image} className="rounded-full eight wide column" />
+            <div className="artist-page-header-info pt-12 pl-12 eight wide column">
+              <span className="text-6xl">{artistInfo.name} </span>
+              <span className="text-4xl">●</span>
+              <span className="text-2xl text-pink-500"> {artistInfo.type} </span>
+              <div className="text-2xl pt-4">
+                <span className="text-pink-500">{artistInfo.followers} </span>
+                <span>followers</span> ● <span>{artistInfo.popularity}</span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <div className="w-full max-w-md bg-gray-800">
-        <form action="" className=" bg-white shadow-md rounded px-8 py-8 pt-8">
-          <div className="px-4 pb-4">
-            <label htmlFor="email" className="text-sm block font-bold  pb-2">
-              EMAIL ADDRESS
-            </label>
-            <input
-              type="email"
-              name="email"
-              id=""
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline border-blue-300 "
-              placeholder="Johnbull@example.com"
-            />
+        <div className="row ">
+          <div className="sixteen wide column">
+            <div className="text-2xl pl-12 text-pink-500 mt-4">Top tracks</div>
+            <TrackList tracks={topTracks} />
           </div>
-          <div className="px-4 pb-4">
-            <label htmlFor="password" className="text-sm block font-bold pb-2">
-              PASSWORD
-            </label>
-            <input
-              type="password"
-              name="email"
-              id=""
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline border-blue-300"
-              placeholder="Enter your password"
-            />
-          </div>
-          <div>
-            <button
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-              type="button"
-            >
-              Sign In
-            </button>
-          </div>
-        </form>
+        </div>
       </div>
     </div>
   );
