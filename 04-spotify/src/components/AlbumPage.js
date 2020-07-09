@@ -104,7 +104,7 @@ const AlbumPage = ({ match }) => {
         <div className="row">
           <div className="sixteen wide column">
             <div className="ui grid">
-              <img src={albumInfo.image} />
+              <img src={albumInfo.image} className="album-image" />
               <div className="album-page-header-info pt-4">
                 <span className="text-2xl">{albumInfo.name}</span>
                 <div>

@@ -102,3 +102,11 @@ li a:hover {
   justify-content: center;
   flex-direction: column;
 }
+
+.artist-image {
+  width: 300px;
+}
+
+.album-image {
+  width: 300px;
+}
