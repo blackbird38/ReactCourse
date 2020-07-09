@@ -82,6 +82,7 @@ const ArtistPage = ({ match }) => {
             album: track.album,
             duration_ms: track.duration_ms,
             type: track.type,
+            mp3: track.preview_url,
             uri: track.uri,
           };
         });

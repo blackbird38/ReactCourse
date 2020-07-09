@@ -5,6 +5,21 @@ const clientId = 'add-your-client-id';
 module.exports = clientId;
 ```
 
+https://www.npmjs.com/package/react-jinke-music-player
+npm install react-jinke-music-player --save
+
+https://www.npmjs.com/package/sweetalert
+npm install --save sweetalert
+
+(https://www.npmjs.com/package/react-icons
+npm install react-icons --save)
+
+http://react-icons.github.io/react-icons/fa.html
+npm install react-icons@^2 --save
+
+https://www.npmjs.com/package/rc-switch
+npm install rc-switch --save
+
 To get your clientID on Spotify:
 
 https://developer.spotify.com/documentation/general/guides/app-settings/

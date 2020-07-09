@@ -9,7 +9,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <nav className="ui inverted segment bottom fixed menu">
+        <nav className="ui inverted segment top fixed menu">
           <ul className="ui inverted pointing secondary menu">
             <li></li>
             <li className="header item">

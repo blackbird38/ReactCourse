@@ -6,8 +6,6 @@ import AlbumList from './AlbumList';
 import Loading from './Loading';
 
 function SearchPage() {
-  const [searchTerm, setSearchTerm] = useState('');
-
   const [searchResult, setSearchResult] = useState([]);
 
   useEffect(() => {

@@ -1,0 +1,37 @@
+.rc-slider-handle {
+  background-color: deeppink !important;
+}
+
+.rc-slider {
+  background-color: inherit !important;
+  border: none;
+}
+.progress-bar {
+  background-color: inherit !important;
+  margin-bottom: 40px !important;
+  padding-left: 10px !important;
+}
+
+.rc-slider-track {
+  background-color: deeppink !important;
+}
+
+.audio-title {
+  color: deeppink !important;
+}
+
+.panel-content {
+}
+
+.music-player-panel {
+  height: 125px !important;
+  padding-bottom: 20px;
+}
+
+.sounds-icon:hover {
+  color: deeppink !important;
+}
+
+.icon svg {
+  fill: deeppink !important;
+}
