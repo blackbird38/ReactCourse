@@ -1,10 +1,10 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
 import { withRouter } from 'react-router';
+import { Link } from 'react-router-dom';
 import Spotify from '../util/Spotify';
 import TrackList from './TrackList';
 import convertMS from '../util/convertMS';
-import { Link } from 'react-router-dom';
 
 const AlbumPage = ({ match }) => {
   const { id } = match.params;
@@ -55,7 +55,6 @@ const AlbumPage = ({ match }) => {
   };
 
   const getAlbumTracksById = (id) => {
-    console.log('getAlbumTracksById');
     const accessToken = Spotify.getAccessToken();
     fetch(`https://api.spotify.com/v1/albums/${id}/tracks`, {
       headers: {
@@ -66,7 +65,7 @@ const AlbumPage = ({ match }) => {
         return response.json();
       })
       .then((jsonResponse) => {
-        console.log('getAlbumTracksById jsonResponse', jsonResponse);
+        //console.log('getAlbumTracksById jsonResponse', jsonResponse);
         if (!jsonResponse.items) {
           // no tracks in the response
           return [];

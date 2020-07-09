@@ -110,3 +110,11 @@ li a:hover {
 .album-image {
   width: 300px;
 }
+
+.artist-card-image {
+  width: 300px !important;
+}
+
+.genre {
+  margin-bottom: 0.5em !important;
+}

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { withRouter } from 'react-router';
 import Spotify from '../util/Spotify';
 import TrackList from './TrackList';
+import ArtistList from './ArtistList';
 
 const ArtistPage = ({ match }) => {
   const accessToken = Spotify.getAccessToken();
@@ -12,9 +13,12 @@ const ArtistPage = ({ match }) => {
 
   const [topTracks, setTopTracks] = useState([]);
 
+  const [relatedArtists, setRelatedArtists] = useState([]);
+
   useEffect(() => {
     getArtistById(id);
     getArtistTopTracksById(id);
+    getRelatedArtists(id);
   }, []);
 
   const getArtistById = (id) => {
@@ -62,7 +66,7 @@ const ArtistPage = ({ match }) => {
         return response.json();
       })
       .then((jsonResponse) => {
-        console.log('jsonResponse toptracks', jsonResponse);
+        // console.log('jsonResponse toptracks', jsonResponse);
 
         if (!jsonResponse.tracks) {
           // no track in the response
@@ -87,39 +91,77 @@ const ArtistPage = ({ match }) => {
       .catch((error) => console.log(error));
   };
 
-  function renderedGenres(genres) {
-    genres.map((genre) => <span>{genre}</span>);
-  }
+  const getRelatedArtists = (id) => {
+    fetch(`https://api.spotify.com/v1/artists/${id}/related-artists`, {
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+      },
+    })
+      .then((response) => {
+        return response.json();
+      })
+      .then((jsonResponse) => {
+        //console.log('getRelatedArtists jsonResponse', jsonResponse);
+        if (!jsonResponse.artists) {
+          // no artist in the response
+          return [];
+        }
+
+        const filteredRelatedArtists = jsonResponse.artists.map((artist) => ({
+          id: artist.id,
+          name: artist.name,
+          genres: artist.genres,
+          popularity: artist.popularity,
+          followers: artist.followers.total,
+          image: artist.images[1].url,
+          type: artist.type,
+          uri: artist.uri,
+        }));
+        setRelatedArtists(filteredRelatedArtists);
+        console.log(filteredRelatedArtists);
+        return filteredRelatedArtists;
+      })
+      .catch((error) => console.log(error));
+  };
+  /*
+  const renderedGenres = artistInfo.genres.map((genre) => (
+    <div class="ui pink horizontal label genre">{genre}</div>
+  ));*/
 
   return (
-    <>
-      <div className="artist-page">
-        <div className="ui grid">
-          <div className="row">
-            <div className="sixteen wide column">
-              <div className="ui grid">
-                <img src={artistInfo.image} className="artist-image" />
-                <div className="artist-page-header-info pt-12 pl-12">
-                  <span className="text-6xl">{artistInfo.name} </span>
-                  <span className="text-4xl">●</span>
-                  <span className="text-2xl text-pink-500"> {artistInfo.type} </span>
-                  <div className="text-2xl pt-4">
-                    <span className="text-pink-500">{artistInfo.followers} </span>
-                    <span>followers</span> ● <span>{artistInfo.popularity}</span>
-                  </div>
+    <div className="artist-page">
+      <div className="ui grid">
+        <div className="row">
+          <div className="sixteen wide column">
+            <div className="ui grid">
+              <img src={artistInfo.image} className="artist-image" />
+              <div className="artist-page-header-info pt-12 pl-12">
+                <span className="text-6xl">{artistInfo.name} </span>
+                <span className="text-4xl">●</span>
+                <span className="text-2xl text-pink-500"> {artistInfo.type} </span>
+                <div className="text-2xl pt-4">
+                  <span className="text-pink-500">{artistInfo.followers} </span>
+                  <span>followers</span> ● <span>{artistInfo.popularity}</span>
                 </div>
+                <div className="text-2xl pt-4">{}</div>
               </div>
             </div>
           </div>
-          <div className="row">
-            <div className="sixteen wide column">
-              <div className="text-2xl pl-12 text-pink-500 mt-4">Top tracks</div>
-              <TrackList tracks={topTracks} />
-            </div>
+        </div>
+        <div className="row">
+          <div className="sixteen wide column">
+            <div className="text-2xl pl-12 text-pink-500 mt-4">Top tracks</div>
+            <TrackList tracks={topTracks} />
+          </div>
+        </div>
+        <div className="row">
+          <div className="sixteen wide column">
+            <div className="text-2xl pl-12 text-pink-500 mt-4">Related artists</div>
+            <ArtistList artists={relatedArtists} />
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 export default withRouter(ArtistPage);
