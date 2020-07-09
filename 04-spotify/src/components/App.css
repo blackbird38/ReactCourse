@@ -1,0 +1,97 @@
+.App {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  /*background-color: #333333 !important;*/
+  /* background-color: #333333;*/
+}
+
+.image-list {
+  margin: 2em !important;
+  margin-left: 8% !important;
+  /* background-color: #333333;*/
+}
+
+.image-list img {
+}
+
+.search-bar {
+  margin-top: 4em;
+}
+
+.card {
+  /*background-color: #333333 !important;
+  color: grey !important;*/
+  width: 301px !important;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111111;
+}
+
+.card-header {
+  font-size: large !important;
+  text-decoration: none !important;
+}
+
+.description {
+  /* background-color: #333333 !important;
+  color: grey !important;*/
+}
+
+.album-page {
+  margin-top: 4em;
+  width: 80% !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.album-name {
+  padding-left: 2em;
+}
+.album-page-header-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1em;
+}
+
+.track-list {
+  display: flex !important;
+  flex-direction: row !important;
+  margin-left: 1em;
+}
+
+.track-number {
+  font-size: 1.5em !important;
+  padding-right: 1em;
+}
+
+.track-name {
+  font-size: 1.25em !important;
+}
+
+.artist-page-header-info {
+}

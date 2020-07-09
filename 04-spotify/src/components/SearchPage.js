@@ -12,7 +12,7 @@ function SearchPage() {
 
   useEffect(() => {
     search('Enya');
-    console.log('useEffect', searchResult);
+    //console.log('useEffect', searchResult);
   }, []);
 
   const search = (term) => {
@@ -30,7 +30,7 @@ function SearchPage() {
           // no album in the response
           return [];
         }
-        console.log(jsonResponse);
+        //console.log('jsonResponse', jsonResponse);
         const filteredAlbums = jsonResponse.albums.items.map((album) => ({
           id: album.id,
           name: album.name,
@@ -42,7 +42,7 @@ function SearchPage() {
         }));
         //setSearchTerm(term);
         setSearchResult(filteredAlbums);
-        console.log('Spotify', filteredAlbums);
+        // console.log('Spotify', filteredAlbums);
         return filteredAlbums;
       })
       .catch((error) => console.log(error));
