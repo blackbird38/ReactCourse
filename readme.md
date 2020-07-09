@@ -56,3 +56,13 @@ https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/%C3%89galit%C3%A9_en_
 https://developer.mozilla.org/en-US/docs/Glossary/IIFE
 
 https://riptutorial.com/fr/javascript/example/843/expressions-de-fonction-immediatement-invoquees
+
+tailwind:
+
+https://blog.logrocket.com/create-react-app-and-tailwindcss/
+
+https://marketplace.visualstudio.com/items?itemName=EQuimper.react-native-react-redux
+
+https://pomb.us/build-your-own-react/
+
+https://reactpodcast.com/

@@ -18,3 +18,7 @@ Register your application using the Spotify application registration flow.
 https://developer.spotify.com/dashboard/applications
 Give your application a relevant name and description. Also, add the following Redirect URI:
 http://localhost:3000/
+
+tailwind:
+
+https://blog.logrocket.com/create-react-app-and-tailwindcss/
