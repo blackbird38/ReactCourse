@@ -50,3 +50,9 @@ https://github.com/react-spring/zustand
 https://developer.spotify.com/documentation/web-api/
 
 https://overreacted.io/
+
+https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/%C3%89galit%C3%A9_en_JavaScript
+
+https://developer.mozilla.org/en-US/docs/Glossary/IIFE
+
+https://riptutorial.com/fr/javascript/example/843/expressions-de-fonction-immediatement-invoquees
