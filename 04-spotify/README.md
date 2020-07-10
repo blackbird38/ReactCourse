@@ -34,6 +34,10 @@ https://developer.spotify.com/documentation/web-api/reference/artists/get-artist
 
 ### `npm start`
 
+### react-jinke-music-player
+
+https://github.com/lijinke666/react-music-player
+
 https://www.npmjs.com/package/react-jinke-music-player
 npm install react-jinke-music-player --save
 
@@ -48,10 +52,6 @@ npm install react-icons@^2 --save
 
 https://www.npmjs.com/package/rc-switch
 npm install rc-switch --save
-
-### `npm install`
-
-### `npm start`
 
 https://developer.spotify.com/documentation/web-api/
 
