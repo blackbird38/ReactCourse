@@ -203,38 +203,38 @@ const options = {
 
   //Music is downloaded handle
   onAudioDownload(audioInfo) {
-    console.log('audio download', audioInfo);
+    //console.log('audio download', audioInfo);
   },
 
   //audio play handle
   onAudioPlay(audioInfo) {
-    console.log('audio playing', audioInfo);
+    //console.log('audio playing', audioInfo);
   },
 
   //audio pause handle
   onAudioPause(audioInfo) {
-    console.log('audio pause', audioInfo);
+    // console.log('audio pause', audioInfo);
   },
 
   //When the user has moved/jumped to a new location in audio
   onAudioSeeked(audioInfo) {
-    console.log('audio seeked', audioInfo);
+    // console.log('audio seeked', audioInfo);
   },
 
   //When the volume has changed  min = 0.0  max = 1.0
   onAudioVolumeChange(currentVolume) {
-    console.log('audio volume change', currentVolume);
+    //console.log('audio volume change', currentVolume);
   },
 
   //The single song is ended handle
   onAudioEnded(audioInfo) {
     // swal('Audio is ended!', '', 'success')
-    console.log('audio ended', audioInfo);
+    //console.log('audio ended', audioInfo);
   },
 
   //audio load abort The target event like {...,audioName:xx,audioSrc:xx,playMode:xx}
   onAudioAbort(e) {
-    console.log('audio abort', e);
+    //console.log('audio abort', e);
   },
 
   //audio play progress handle
@@ -244,47 +244,47 @@ const options = {
 
   //audio reload handle
   onAudioReload(audioInfo) {
-    console.log('audio reload:', audioInfo);
+    //console.log('audio reload:', audioInfo);
   },
 
   //audio load failed error handle
   onAudioLoadError(e) {
-    console.error('audio load err', e);
+    //console.error('audio load err', e);
   },
 
   //theme change handle
   onThemeChange(theme) {
-    console.log('theme change:', theme);
+    //console.log('theme change:', theme);
   },
 
   onAudioListsChange(currentPlayId, audioLists, audioInfo) {
-    console.log('[currentPlayId] audio lists change:', currentPlayId);
-    console.log('[audioLists] audio lists change:', audioLists);
-    console.log('[audioInfo] audio lists change:', audioInfo);
+    // console.log('[currentPlayId] audio lists change:', currentPlayId);
+    //console.log('[audioLists] audio lists change:', audioLists);
+    //console.log('[audioInfo] audio lists change:', audioInfo);
   },
 
   onAudioPlayTrackChange(currentPlayId, audioLists, audioInfo) {
-    console.log('audio play track change:', currentPlayId, audioLists, audioInfo);
+    //console.log('audio play track change:', currentPlayId, audioLists, audioInfo);
   },
 
   onPlayModeChange(playMode) {
-    console.log('play mode change:', playMode);
+    // console.log('play mode change:', playMode);
   },
 
   onModeChange(mode) {
-    console.log('mode change:', mode);
+    //console.log('mode change:', mode);
   },
 
   onAudioListsPanelChange(panelVisible) {
-    console.log('audio lists panel visible:', panelVisible);
+    //console.log('audio lists panel visible:', panelVisible);
   },
 
   onAudioListsDragEnd(fromIndex, endIndex) {
-    console.log('audio lists drag end:', fromIndex, endIndex);
+    //console.log('audio lists drag end:', fromIndex, endIndex);
   },
 
   onAudioLyricChange(lineNum, currentLyric) {
-    console.log('audio lyric change:', lineNum, currentLyric);
+    //console.log('audio lyric change:', lineNum, currentLyric);
   },
 
   // custom music player root node
@@ -299,7 +299,7 @@ const options = {
    * audio.crossOrigin = 'xxx' // config cross origin
    */
   getAudioInstance(audio) {
-    console.log('audio instance', audio);
+    //console.log('audio instance', audio);
   },
 
   // transform audio info like return a Promise
@@ -459,7 +459,7 @@ class JkMusicPlayer extends React.PureComponent {
     this.setState({
       params: data,
     });
-    console.log('component did mount.');
+    //console.log('component did mount.');
   }
 
   componentDidUpdate(oldProps) {
@@ -480,8 +480,8 @@ class JkMusicPlayer extends React.PureComponent {
   render() {
     const { params } = this.state;
     //  console.log('params: ', params);
-    console.log('----------------------------------');
-    console.log(this.props.audioList);
+    // console.log('----------------------------------');
+    //  console.log(this.props.audioList);
     return (
       <>
         <section className="settings">

@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import Spotify from '../util/Spotify';
 import TrackList from './TrackList';
 import convertMS from '../util/convertMS';
+import Loading from './Loading';
 
 const AlbumPage = ({ match }) => {
   const { id } = match.params;
@@ -55,6 +56,7 @@ const AlbumPage = ({ match }) => {
   };
 
   const getAlbumTracksById = (id) => {
+    // const album = await getAlbumById(id);
     const accessToken = Spotify.getAccessToken();
     fetch(`https://api.spotify.com/v1/albums/${id}/tracks`, {
       headers: {
@@ -78,6 +80,8 @@ const AlbumPage = ({ match }) => {
           mp3: track.preview_url,
           type: track.type,
           uri: track.uri,
+          artists: track.artists,
+          album: albumInfo.image,
         }));
         setAlbumTracks(filteredAlbumTracks);
         return filteredAlbumTracks;
@@ -100,31 +104,35 @@ const AlbumPage = ({ match }) => {
 
   return (
     <div className="album-page">
-      <div className="ui grid">
-        <div className="row">
-          <div className="sixteen wide column">
-            <div className="ui grid">
-              <img src={albumInfo.image} className="album-image" />
-              <div className="album-page-header-info pt-4">
-                <span className="text-2xl">{albumInfo.name}</span>
-                <div>
-                  by <span className="text-pink-500">{renderedArtists}</span>
-                </div>
-                <div>
-                  <span>{albumInfo.release_date}</span> ●
-                  <span> {totalAlbumPlayTime(albumTracks)} </span> ●
-                  <span> {albumTracks.length} tracks </span>
+      {albumInfo ? (
+        <div className="ui grid">
+          <div className="row">
+            <div className="sixteen wide column">
+              <div className="ui grid">
+                <img src={albumInfo.image} className="album-image" />
+                <div className="album-page-header-info pt-4">
+                  <span className="text-2xl">{albumInfo.name}</span>
+                  <div>
+                    by <span className="text-pink-500">{renderedArtists}</span>
+                  </div>
+                  <div>
+                    <span>{albumInfo.release_date}</span> ●
+                    <span> {totalAlbumPlayTime(albumTracks)} </span> ●
+                    <span> {albumTracks.length} tracks </span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div className="row">
-          <div className="sixteen wide column">
-            <TrackList tracks={albumTracks} />
+          <div className="row">
+            <div className="sixteen wide column">
+              <TrackList tracks={albumTracks} imageAlbum={albumInfo.image || null} />
+            </div>
           </div>
         </div>
-      </div>
+      ) : (
+        <Loading />
+      )}
     </div>
   );
 };

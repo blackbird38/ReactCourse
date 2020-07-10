@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const ArtistCard = ({ artist }) => {
   const renderedGenres = artist.genres.map((genre) => (
-    <div class="ui pink horizontal label genre">{genre}</div>
+    <div className="ui pink horizontal label genre">{genre}</div>
   ));
   return (
     <div className="card">

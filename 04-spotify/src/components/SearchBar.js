@@ -5,7 +5,7 @@ const SearchBar = ({ search }) => {
     <div className="ui action input search-bar">
       <input
         type="text"
-        placeholder="Search..."
+        placeholder="Search albums..."
         wtx-context="6921A6D0-8BA7-4F93-8AD1-F489A90CD245"
         onChange={(e) => {
           search(e.target.value);

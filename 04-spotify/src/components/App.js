@@ -18,10 +18,10 @@ function App() {
           </ul>
         </nav>
         <Switch>
-          <Route path="/album/:id" component={AlbumPage}>
+          <Route exact path="/album/:id" component={AlbumPage}>
             <AlbumPage />
           </Route>
-          <Route path="/artist/:id" component={ArtistPage}>
+          <Route exact path="/artist/:id" component={ArtistPage}>
             <ArtistPage />
           </Route>
           <Route path="/">

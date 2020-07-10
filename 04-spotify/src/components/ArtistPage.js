@@ -19,7 +19,7 @@ const ArtistPage = ({ match }) => {
     getArtistById(id);
     getArtistTopTracksById(id);
     getRelatedArtists(id);
-  }, []);
+  }, [id]);
 
   const getArtistById = (id) => {
     fetch(`https://api.spotify.com/v1/artists/${id}`, {
@@ -66,7 +66,7 @@ const ArtistPage = ({ match }) => {
         return response.json();
       })
       .then((jsonResponse) => {
-        // console.log('jsonResponse toptracks', jsonResponse);
+        console.log('jsonResponse toptracks', jsonResponse);
 
         if (!jsonResponse.tracks) {
           // no track in the response
@@ -84,6 +84,8 @@ const ArtistPage = ({ match }) => {
             type: track.type,
             mp3: track.preview_url,
             uri: track.uri,
+            artists: track.artists,
+            image: track.album.images[1].url,
           };
         });
         setTopTracks(filteredArtistTopTracksData);
