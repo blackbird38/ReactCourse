@@ -28,7 +28,7 @@
 
 04-spotify
 
-![alt text](https://1.bp.blogspot.com/-DZyIDOMo964/XwhBt1n8VTI/AAAAAAAAAZg/3bLfVkTLt8o9EW_zmQkpcQHq0I9h7bKAwCLcBGAsYHQ/s640/Capture01.JPG)
+![alt text](https://1.bp.blogspot.com/-DZyIDOMo964/XwhBt1n8VTI/AAAAAAAAAZg/3bLfVkTLt8o9EW_zmQkpcQHq0I9h7bKAwCLcBGAsYHQ/s1600/Capture01.JPG)
 
 ![alt text](https://1.bp.blogspot.com/-NuezoquL0dY/XwhBuOpE5pI/AAAAAAAAAZo/hVb8FxjGgDQY_TTC80SvszF0UwvO_bwFACLcBGAsYHQ/s1600/Capture02.JPG)
 
