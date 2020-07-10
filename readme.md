@@ -26,6 +26,18 @@
 
 ![alt text](https://1.bp.blogspot.com/-tGyXiyJKE-k/XwTo-H5p_iI/AAAAAAAAAYk/YkCyNv8n410ZUKwmMRYpVtOkqCpE9LcGQCLcBGAsYHQ/s1600/Capture05.JPG)
 
+04-spotify
+
+![alt text](https://1.bp.blogspot.com/-DZyIDOMo964/XwhBt1n8VTI/AAAAAAAAAZg/3bLfVkTLt8o9EW_zmQkpcQHq0I9h7bKAwCLcBGAsYHQ/s640/Capture01.JPG)
+
+![alt text](https://1.bp.blogspot.com/-NuezoquL0dY/XwhBuOpE5pI/AAAAAAAAAZo/hVb8FxjGgDQY_TTC80SvszF0UwvO_bwFACLcBGAsYHQ/s1600/Capture02.JPG)
+
+![alt text](https://1.bp.blogspot.com/-MSLG97nHd5s/XwhBvImGflI/AAAAAAAAAZw/Uah8YP7yJEEq7-HaVJXFPZ_-m-LgHRrrQCLcBGAsYHQ/s1600/Capture05.JPG)
+
+![alt text](https://1.bp.blogspot.com/-5bZCQ3bcQyU/XwhBuC3rF8I/AAAAAAAAAZk/QRdYvHyvTv0kuuKK0bBl55muYgsN-MIogCLcBGAsYHQ/s1600/Capture03.JPG)
+
+![alt text](https://1.bp.blogspot.com/-gQrAaaSBJ4w/XwhBuo4jo7I/AAAAAAAAAZs/NOV9XJ8WTJws9mbsJJJ_3K1NgbRj2W6HgCLcBGAsYHQ/s1600/Capture04.JPG)
+
 https://jsonplaceholder.typicode.com/
 
 https://github.com/boo1ean/casual

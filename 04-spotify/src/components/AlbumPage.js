@@ -67,7 +67,7 @@ const AlbumPage = ({ match }) => {
         return response.json();
       })
       .then((jsonResponse) => {
-        console.log('getAlbumTracksById jsonResponse', jsonResponse);
+        //  console.log('getAlbumTracksById jsonResponse', jsonResponse);
         if (!jsonResponse.items) {
           // no tracks in the response
           return [];

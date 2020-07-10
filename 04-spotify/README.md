@@ -1,9 +1,36 @@
+### MiniSpotify
+
+![alt text](https://1.bp.blogspot.com/-DZyIDOMo964/XwhBt1n8VTI/AAAAAAAAAZg/3bLfVkTLt8o9EW_zmQkpcQHq0I9h7bKAwCLcBGAsYHQ/s640/Capture01.JPG)
+
+![alt text](https://1.bp.blogspot.com/-NuezoquL0dY/XwhBuOpE5pI/AAAAAAAAAZo/hVb8FxjGgDQY_TTC80SvszF0UwvO_bwFACLcBGAsYHQ/s1600/Capture02.JPG)
+
+![alt text](https://1.bp.blogspot.com/-MSLG97nHd5s/XwhBvImGflI/AAAAAAAAAZw/Uah8YP7yJEEq7-HaVJXFPZ_-m-LgHRrrQCLcBGAsYHQ/s1600/Capture05.JPG)
+
+![alt text](https://1.bp.blogspot.com/-5bZCQ3bcQyU/XwhBuC3rF8I/AAAAAAAAAZk/QRdYvHyvTv0kuuKK0bBl55muYgsN-MIogCLcBGAsYHQ/s1600/Capture03.JPG)
+
+![alt text](https://1.bp.blogspot.com/-gQrAaaSBJ4w/XwhBuo4jo7I/AAAAAAAAAZs/NOV9XJ8WTJws9mbsJJJ_3K1NgbRj2W6HgCLcBGAsYHQ/s1600/Capture04.JPG)
+
 Add a file: `./src/util.clientID.js` with the code:
 
 ```
 const clientId = 'add-your-client-id';
 module.exports = clientId;
 ```
+
+To get your clientID on Spotify:
+
+https://developer.spotify.com/documentation/general/guides/app-settings/
+
+Register your application using the Spotify application registration flow.
+https://developer.spotify.com/dashboard/applications
+Give your application a relevant name and description. Also, add the following Redirect URI:
+http://localhost:3000/
+
+---
+
+### `npm install`
+
+### `npm start`
 
 https://www.npmjs.com/package/react-jinke-music-player
 npm install react-jinke-music-player --save
@@ -19,10 +46,6 @@ npm install react-icons@^2 --save
 
 https://www.npmjs.com/package/rc-switch
 npm install rc-switch --save
-
-To get your clientID on Spotify:
-
-https://developer.spotify.com/documentation/general/guides/app-settings/
 
 ### `npm install`
 

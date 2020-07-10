@@ -66,7 +66,7 @@ const ArtistPage = ({ match }) => {
         return response.json();
       })
       .then((jsonResponse) => {
-        console.log('jsonResponse toptracks', jsonResponse);
+        // console.log('jsonResponse toptracks', jsonResponse);
 
         if (!jsonResponse.tracks) {
           // no track in the response
@@ -121,7 +121,7 @@ const ArtistPage = ({ match }) => {
           uri: artist.uri,
         }));
         setRelatedArtists(filteredRelatedArtists);
-        console.log(filteredRelatedArtists);
+        //console.log(filteredRelatedArtists);
         return filteredRelatedArtists;
       })
       .catch((error) => console.log(error));
