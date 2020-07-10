@@ -26,7 +26,9 @@ https://developer.spotify.com/dashboard/applications
 Give your application a relevant name and description. Also, add the following Redirect URI:
 http://localhost:3000/
 
----
+SPOTIFY API:
+
+https://developer.spotify.com/documentation/web-api/reference/artists/get-artists-albums/
 
 ### `npm install`
 
