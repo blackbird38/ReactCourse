@@ -59,6 +59,8 @@ https://developer.spotify.com/documentation/web-api/
 
 ##How to deploy React App to GitHub Pages
 
+https://www.youtube.com/watch?v=ctLFWAanxcI
+
 https://dev.to/yuribenjamin/how-to-deploy-react-app-in-github-pages-2a1f
 
 npm install gh-pages --save-dev
