@@ -22,7 +22,6 @@ const TrackList = ({ tracks, imageAlbum }) => {
   }, [tracks]);
 
   const playTrack = (track) => {
-    // console.log('playList', playList);
     console.log(JSON.stringify(track.image));
     console.log('playTrack', track.mp3);
     const artists = track.artists.map((artist) => artist.name);

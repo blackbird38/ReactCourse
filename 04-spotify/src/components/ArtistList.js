@@ -5,7 +5,7 @@ const ArtistList = ({ artists }) => {
   const renderedArtists = artists.map((artist) => (
     <ArtistCard artist={artist} key={artist.id} />
   ));
-  return <div className="ui link cards image-list">{renderedArtists}</div>;
+  return <div className="ui link cards related-artists-list">{renderedArtists}</div>;
 };
 
 export default ArtistList;

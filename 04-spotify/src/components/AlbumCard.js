@@ -7,7 +7,7 @@ const AlbumCard = ({ album }) => {
   ));
   return (
     <div className="card">
-      <div className="image image">
+      <div className="image">
         <Link to={`/album/${album.id}`}>
           <img src={album.image} />
         </Link>

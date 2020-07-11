@@ -31,8 +31,6 @@ const ArtistPage = ({ match }) => {
         return response.json();
       })
       .then((jsonResponse) => {
-        // console.log('getArtistById', jsonResponse);
-
         if (!jsonResponse) {
           // no artist in the response
           return null;
@@ -48,7 +46,6 @@ const ArtistPage = ({ match }) => {
           image: jsonResponse.images[1].url,
           uri: jsonResponse.uri,
         };
-        // console.log('AlbumPage', filteredAlbumData);
         setArtistInfo(filteredArtistData);
 
         return filteredArtistData;
@@ -66,8 +63,6 @@ const ArtistPage = ({ match }) => {
         return response.json();
       })
       .then((jsonResponse) => {
-        // console.log('jsonResponse toptracks', jsonResponse);
-
         if (!jsonResponse.tracks) {
           // no track in the response
           return null;
@@ -104,7 +99,6 @@ const ArtistPage = ({ match }) => {
         return response.json();
       })
       .then((jsonResponse) => {
-        //console.log('getRelatedArtists jsonResponse', jsonResponse);
         if (!jsonResponse.artists) {
           // no artist in the response
           return [];
@@ -121,7 +115,6 @@ const ArtistPage = ({ match }) => {
           uri: artist.uri,
         }));
         setRelatedArtists(filteredRelatedArtists);
-        //console.log(filteredRelatedArtists);
         return filteredRelatedArtists;
       })
       .catch((error) => console.log(error));
@@ -152,13 +145,15 @@ const ArtistPage = ({ match }) => {
         </div>
         <div className="row">
           <div className="sixteen wide column">
-            <div className="text-2xl pl-12 text-pink-500 mt-4">Top tracks</div>
+            <div className="text-2xl pl-12 text-pink-500 mt-4 mb-4">Top tracks</div>
             <TrackList tracks={topTracks} />
           </div>
         </div>
         <div className="row">
           <div className="sixteen wide column">
-            <div className="text-2xl pl-12 text-pink-500 mt-4">Related artists</div>
+            <div className="text-2xl pl-12 text-pink-500 mt-4 mb-4">
+              Related artists
+            </div>
             <ArtistList artists={relatedArtists} />
           </div>
         </div>

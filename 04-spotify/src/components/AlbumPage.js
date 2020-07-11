@@ -30,8 +30,6 @@ const AlbumPage = ({ match }) => {
         return response.json();
       })
       .then((jsonResponse) => {
-        // console.log(jsonResponse);
-
         if (!jsonResponse) {
           // no album in the response
           return null;
@@ -47,7 +45,6 @@ const AlbumPage = ({ match }) => {
           pupularity: jsonResponse.popularity,
           uri: jsonResponse.uri,
         };
-        // console.log('AlbumPage', filteredAlbumData);
         setAlbumInfo(filteredAlbumData);
         setAlbumArtists(jsonResponse.artists);
         return filteredAlbumData;
@@ -56,7 +53,6 @@ const AlbumPage = ({ match }) => {
   };
 
   const getAlbumTracksById = (id) => {
-    // const album = await getAlbumById(id);
     const accessToken = Spotify.getAccessToken();
     fetch(`https://api.spotify.com/v1/albums/${id}/tracks`, {
       headers: {
@@ -67,7 +63,6 @@ const AlbumPage = ({ match }) => {
         return response.json();
       })
       .then((jsonResponse) => {
-        //  console.log('getAlbumTracksById jsonResponse', jsonResponse);
         if (!jsonResponse.items) {
           // no tracks in the response
           return [];
@@ -126,6 +121,7 @@ const AlbumPage = ({ match }) => {
           </div>
           <div className="row">
             <div className="sixteen wide column">
+              <div className="text-2xl pl-12 text-pink-500 mt-4 mb-4">Tracks</div>
               <TrackList tracks={albumTracks} imageAlbum={albumInfo.image || null} />
             </div>
           </div>
