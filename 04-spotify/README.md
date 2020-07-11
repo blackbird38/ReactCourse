@@ -1,4 +1,4 @@
-### MiniSpotify
+### MiniSpotify: https://blackbird38.github.io/ReactCourse/
 
 ![alt text](https://1.bp.blogspot.com/-DZyIDOMo964/XwhBt1n8VTI/AAAAAAAAAZg/3bLfVkTLt8o9EW_zmQkpcQHq0I9h7bKAwCLcBGAsYHQ/s1600/Capture01.JPG)
 
