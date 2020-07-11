@@ -133,20 +133,19 @@ const ArtistPage = ({ match }) => {
 
   return (
     <div className="artist-page">
-      <div className="ui grid">
+      <div className="ui grid container">
         <div className="row">
           <div className="sixteen wide column">
             <div className="ui grid">
               <img src={artistInfo.image} className="artist-image" />
-              <div className="artist-page-header-info pt-12 pl-12">
-                <span className="text-6xl">{artistInfo.name} </span>
-                <span className="text-4xl">●</span>
-                <span className="text-2xl text-pink-500"> {artistInfo.type} </span>
-                <div className="text-2xl pt-4">
+              <div className="artist-page-header-info pt-12">
+                <p className="text-4xl">{artistInfo.name} </p>
+                <span className="text-xl text-pink-500"> {artistInfo.type} </span>
+                <div className="text-xl pt-4">
                   <span className="text-pink-500">{artistInfo.followers} </span>
-                  <span>followers</span> ● <span>{artistInfo.popularity}</span>
+                  <span>followers</span> ●
+                  <span className="text-lg">{artistInfo.popularity}</span>
                 </div>
-                <div className="text-2xl pt-4">{}</div>
               </div>
             </div>
           </div>

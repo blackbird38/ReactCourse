@@ -79,6 +79,12 @@ li a:hover {
   margin-left: 1em;
 }
 
+.artist-page-header-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1em;
+}
+
 .track-list {
   display: flex !important;
   flex-direction: row !important;
