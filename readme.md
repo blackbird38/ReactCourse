@@ -58,6 +58,20 @@ https://kentcdodds.com/blog/
 
 https://github.com/react-spring/zustand
 
+https://www.phpied.com/3-ways-to-define-a-javascript-class/
+
+https://medium.com/@imranhsayed/create-modal-in-react-using-portal-48b3662a28b9
+
+https://www.usabilis.com/atomic-design/
+
+https://restcountries.eu/rest/v2/all
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
+
+https://medium.com/edge-coders/the-difference-between-flux-and-redux-71d31b118c1
+
 ---
 
 Ressources
