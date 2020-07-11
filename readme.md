@@ -38,6 +38,10 @@
 
 ![alt text](https://1.bp.blogspot.com/-gQrAaaSBJ4w/XwhBuo4jo7I/AAAAAAAAAZs/NOV9XJ8WTJws9mbsJJJ_3K1NgbRj2W6HgCLcBGAsYHQ/s1600/Capture04.JPG)
 
+---
+
+https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets
+
 https://jsonplaceholder.typicode.com/
 
 https://github.com/boo1ean/casual
