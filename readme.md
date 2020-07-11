@@ -58,6 +58,68 @@ https://kentcdodds.com/blog/
 
 https://github.com/react-spring/zustand
 
+---
+
+Ressources
+
+https://reactjs.org/tutorial/tutorial.html
+
+https://reactjs.org/docs/create-a-new-react-app.html#create-react-app
+
+https://reactjs.org/docs/hooks-reference.html
+
+https://reactjs.org/docs/thinking-in-react.html
+
+---
+
+https://fr.reactjs.org/docs/faq-styling.html
+
+https://www.styled-components.com/
+
+https://www.robinwieruch.de/react-css-modules
+
+---
+
+Animation:
+
+https://github.com/chenglou/react-motion (peu maintenu)
+
+https://www.react-spring.io/
+
+https://reactcommunity.org/react-transition-group/
+
+---
+
+Structure de projet:
+
+https://www.usabilis.com/atomic-design/
+
+---
+
+Librairies pour la construction d'applications:
+
+https://reacttraining.com/react-router/
+
+https://redux.js.org/
+
+https://mobx.js.org/README.html
+
+https://react.i18next.com/
+
+---
+
+Framework:
+
+https://umijs.org/
+
+https://dvajs.com/
+
+https://icecreamjs.netlify.com/
+
+https://rematch.github.io/rematch/#/
+
+---
+
 04-spotify
 https://developer.spotify.com/documentation/web-api/
 
