@@ -55,6 +55,16 @@ npm install rc-switch --save
 
 https://developer.spotify.com/documentation/web-api/
 
+---
+
+##How to deploy React App to GitHub Pages
+
+https://dev.to/yuribenjamin/how-to-deploy-react-app-in-github-pages-2a1f
+
+npm install gh-pages --save-dev
+
+npm run deploy
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
