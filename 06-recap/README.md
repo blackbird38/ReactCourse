@@ -1,29 +1,3 @@
-https://photo-gallery-app.vercel.app
-
-npm install styled-components
-
-npm install prop-types
-
-https://fontawesome.com/how-to-use/on-the-web/using-with/react
-
-npm i --save @fortawesome/fontawesome-svg-core
-
-npm install --save @fortawesome/free-solid-svg-icons
-
-npm install --save @fortawesome/react-fontawesome
-
-npm i --save lodash
-
-![alt text](https://1.bp.blogspot.com/-lPEfHdMinrQ/XygrHFTKuGI/AAAAAAAAAbI/TQEBGyGgzIk4xa8crcjzEqhIfrWMf8VjQCLcBGAsYHQ/s1600/sketch.png)
-
-![alt text](https://1.bp.blogspot.com/-RjP10gqdXZg/XygrIs5rjgI/AAAAAAAAAbQ/xbnc2bsRFdMzmornMvE4WQwcjhPIMCCFgCLcBGAsYHQ/s1600/Capture01.JPG)
-
-![alt text](https://1.bp.blogspot.com/-xeNgNP7m-7w/XygrIsivkaI/AAAAAAAAAbM/UQf1lrqOUaoFdryTLGLAfbhfpQxlMEfXwCLcBGAsYHQ/s1600/Capture02.JPG)
-
-![alt text](https://1.bp.blogspot.com/-tur5C3bk20w/XygrIhVIQGI/AAAAAAAAAbU/QF94Cz7A_mQ-MCasRX4uy6hRqp9vdhCFgCLcBGAsYHQ/s1600/Capture03.JPG)
-
-![alt text](https://1.bp.blogspot.com/-LwUxUJNXe5Y/XygrJN4rQhI/AAAAAAAAAbY/bs1ifRh-rAk06LfwZBbCAygWv443MG1LwCLcBGAsYHQ/s1600/Capture04.JPG)
-
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
