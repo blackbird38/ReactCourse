@@ -174,3 +174,11 @@ https://pomb.us/build-your-own-react/
 https://reactpodcast.com/
 
 https://styled-components.com/
+
+---
+
+https://www.toptal.com/designers/htmlarrows/symbols/check-mark/: `<span>&#10003;</span>`
+
+https://www.toptal.com/designers/htmlarrows/math/plus-sign/: `<span>&#43;</span>`
+
+https://www.invisionapp.com

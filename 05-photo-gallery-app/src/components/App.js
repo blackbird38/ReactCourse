@@ -77,6 +77,7 @@ function App() {
         return category.id !== selected.id;
       })
     );
+    setSelected({});
   };
 
   return (
