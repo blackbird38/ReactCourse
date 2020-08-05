@@ -93,11 +93,11 @@ function App() {
     }
     if (currentStep === 'enterPersonalDetails') {
       setShowModal(true);
-      setCurrentStep('enterCityResidence');
     }
   };
 
   const initializeState = () => {
+    setCurrentStep('enterCityResidence');
     setSelectedCity({});
     setSelectedTransportation(transportation);
     setSelectedCountries(countries);
