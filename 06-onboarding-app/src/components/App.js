@@ -57,6 +57,7 @@ function App() {
 
   const onCloseModal = () => {
     setShowModal(false);
+    initializeState();
   };
 
   const headers = [
@@ -94,6 +95,13 @@ function App() {
       setShowModal(true);
       setCurrentStep('enterCityResidence');
     }
+  };
+
+  const initializeState = () => {
+    setSelectedCity({});
+    setSelectedTransportation(transportation);
+    setSelectedCountries(countries);
+    setPersonalDetails({});
   };
 
   return (
