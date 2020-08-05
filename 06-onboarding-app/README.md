@@ -6,7 +6,7 @@ https://onboarding-app-five.vercel.app/
 
 ![alt text](https://1.bp.blogspot.com/-4QNNyEPbByc/XyplXSjCdvI/AAAAAAAAAbw/wB3DgEfVhDwdOa-FFdB4Qizfjrk65huhQCLcBGAsYHQ/s1622/Capture01.JPG)
 
-![alt text](https://1.bp.blogspot.com/-9eDAheuQL8Q/XyplXZV4vUI/AAAAAAAAAb0/S7GwjXNo2IAWsPr2_dUXMFfObiwaVSMuQCLcBGAsYHQ/s1692/Capture02.JPG)
+![alt text](https://1.bp.blogspot.com/--2idvJF5jwQ/XyqJsVIdwwI/AAAAAAAAAco/k093uH4o95Y4dVAqOkeuByxAjUK50kbewCLcBGAsYHQ/s1667/Capture02.JPG)
 
 ![alt text](https://1.bp.blogspot.com/-s43LWF7Nu9w/XyplXcdVneI/AAAAAAAAAbs/zocBnas-wPoWiuwV9Cq8jdDvjjqiyU4ugCLcBGAsYHQ/s1623/Capture03.JPG)
 
