@@ -24,7 +24,7 @@ const Location = ({ transportation, selectTransportation }) => {
         style={{ backgroundColor: background }}
       >
         <div className="image">
-          <img src={'/images/transportation.jpg'} />
+          <img src={'https://image.flaticon.com/icons/svg/3064/3064836.svg'} />
         </div>
         <div className="content">
           <a className="header">{transportation.name}</a>
